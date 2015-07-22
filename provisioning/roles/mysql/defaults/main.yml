@@ -1,7 +1,7 @@
 ---
 # defaults file for mysql
-USERNAME: summer
-PASSWORD: camp
-DB_NAME: summercamp
+USERNAME: "summer"
+PASSWORD: "camp"
+DB_NAME: "summercamp"
 
 use_mysql_dev: true
