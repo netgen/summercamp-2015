@@ -9,3 +9,6 @@ HOST: "vagrant.local"
 USERNAME: "summer"
 PASSWORD: "camp"
 DB_NAME: "summercamp"
+
+WORKSHOP_DATABASES:
+    - ezsylius
