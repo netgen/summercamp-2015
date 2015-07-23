@@ -16,7 +16,12 @@
   tags: [packages,composer]
 
 - name: Add composer auth token
-  copy: src="auth.json" dest="/home/vagrant/.composer/auth.json"
+  template: src=auth-json.j2 dest=/home/vagrant/.composer/auth.json
+  with_items:
+    - { token : "7cd8d8896095c0c8b7e7f5e73a3c5edef01ff949" }
+  tags: [packages,composer]
+
+
 - name: Check if composer.json exists
   stat: path={{ PROJECT_ROOT }}/composer.json
   register: composer_json
