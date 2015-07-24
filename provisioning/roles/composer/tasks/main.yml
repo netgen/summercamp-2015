@@ -15,15 +15,14 @@
   when: ansible_os_family == "Debian"
   tags: [packages,composer]
 
-- name: Create .composer in home dir
-  file: path=/home/vagrant/.composer state=directory mode=0755
-
-- name: Add composer auth token
-  template: src=auth-json.j2 dest=/home/vagrant/.composer/auth.json
-  with_items:
-    - { token : "28605b55107a8e73761ca03f29a1034788ac5676" }
-  tags: [packages,composer]
-
+#- name: Create .composer in home dir
+#  file: path=/home/vagrant/.composer state=directory mode=0755
+#
+#- name: Add composer auth token
+#  template: src=auth-json.j2 dest=/home/vagrant/.composer/auth.json
+#  with_items:
+#    - { token : "" }
+#  tags: [packages,composer]
 
 - name: Check if composer.json exists
   stat: path={{ PROJECT_ROOT }}/composer.json
