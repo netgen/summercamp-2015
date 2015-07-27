@@ -8,7 +8,7 @@ git submodule update
 ( cd workshops/ezpublish-community-sylius &&
   git checkout sylius_integration &&
   git pull origin sylius_integration &&
-  sudo ln -sf /var/www/ezpublish/workshops/ezpublish-community-sylius/installation/vhost /etc/apache2/sites-enabled/ezsylius.conf &&
+  sudo ln -sf /var/www/summercamp/workshops/ezpublish-community-sylius/installation/vhost /etc/apache2/sites-enabled/ezsylius.conf &&
   sudo sh ./installation/run.sh
 )
 
