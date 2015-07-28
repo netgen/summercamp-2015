@@ -29,6 +29,8 @@ If you are on an OS X machine, you can install Ansible with brew or pip
 ```
 pip install ansible
 
+or
+
 brew install ansible
 ```
 
