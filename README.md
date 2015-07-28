@@ -20,6 +20,26 @@ You need to have following installed:
 - [Ansible]
 - [VirtualBox]
 
+If you are on linux machine, preferred method of Ansible installation is
+```
+pip install ansible
+```
+
+If you are on an OS X machine, you can install Ansible with brew or pip
+```
+pip install ansible
+
+brew install ansible
+```
+
+You should not be cloning the Ansible repo and running it like that.
+
+The recommended version of Ansible at the time of writing is 1.8.4.
+
+The minimum recommended version of vagrant at the time of writng is 1.7.3
+
+With these versions you can use Virtualbox 4.x or 5.x
+
 ## Local development setup
 
 The local development is meant to be used in a vagrant provisioned box.
@@ -59,12 +79,6 @@ SendEnv LANG LC_*
 ## Windows Support
 
 Shell script will run from within the vm to provision the setup
-
-## Deploying to remote servers
-
-```
-ansible-playbook -i provisioning/inventories/production provisioning/production.yml -u ubuntu --sudo
-```
 
 [Vagrant]: http://www.vagrantup.com/downloads.html
 [Ansible]: http://docs.ansible.com/intro_installation.html
