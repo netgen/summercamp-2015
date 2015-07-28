@@ -57,3 +57,17 @@
 - name: Create the dev user for the mysql
   mysql_user: name={{ USERNAME }} password={{ PASSWORD }} priv={{ DB_NAME }}.*:ALL,GRANT state=present
   tags: [mysql]
+
+- name: Create databases for workshops
+  mysql_db: name={{ item }} state=present encoding=utf8 collation=utf8_general_ci
+  with_items: WORKSHOP_DATABASES
+  environment: env
+  when: WORKSHOP_DATABASES|lower != 'none'
+  tags: [mysql]
+
+- name: Create user for workshop databases and grant privileges
+  mysql_user: name={{ USERNAME }} password={{ PASSWORD }} priv={{ item }}.*:ALL,GRANT state=present
+  with_items: WORKSHOP_DATABASES
+  environment: env
+  when: WORKSHOP_DATABASES|lower != 'none'
+  tags: [mysql]
