@@ -29,9 +29,3 @@
   notify: restart Apache
   when: ansible_os_family == "Debian"
   tags: [apache2]
-
-- name: make sure that there is no default website
-  file: path={{ APACHE_SITES_ENABLED_CONFIG_PATH }}/000-default.conf state=absent
-  notify:
-  - reload Apache
-  tags: [apache2]
