@@ -1,7 +1,7 @@
-vagrant-ansible-ezpublish
-=========================
+Summercamp 2015 Vagrant Box
+===========================
 
-Vagrant box, with Ansible provisioning to setup new eZ Publish project.
+Vagrant box, with Ansible provisioning to setup all that is required for Summercamp 2015.
 
 ## Authors
 
