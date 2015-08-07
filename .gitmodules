@@ -4,3 +4,6 @@
 [submodule "workshops/ezobjectwrapper"]
 	path = workshops/ezobjectwrapper
 	url = git@github.com:kaliop/ezobjectwrapper-workshop.git
+[submodule "workshops/oo-ftw"]
+	path = workshops/oo-ftw
+	url = git@github.com:weaverryan/php-summercamp-oo.git
