@@ -99,6 +99,7 @@ DAEMON_OPTS="-a ${VARNISH_LISTEN_ADDRESS}:${VARNISH_LISTEN_PORT} \
              -p thread_pool_min=${VARNISH_MIN_THREADS} \
              -p thread_pool_max=${VARNISH_MAX_THREADS} \
              -p thread_pool_timeout=${VARNISH_THREAD_TIMEOUT} \
+             -p vcc_allow_inline_c=true \
              -u varnish -g varnish \
              -S ${VARNISH_SECRET_FILE} \
              -s ${VARNISH_STORAGE}"
