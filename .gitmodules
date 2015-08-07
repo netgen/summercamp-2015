@@ -1,3 +1,6 @@
 [submodule "workshops/ezpublish-community-sylius"]
 	path = workshops/ezpublish-community-sylius
 	url = git@github.com:ilukac/ezpublish-community-sylius.git
+[submodule "workshops/ezobjectwrapper"]
+	path = workshops/ezobjectwrapper
+	url = git@github.com:kaliop/ezobjectwrapper-workshop.git
