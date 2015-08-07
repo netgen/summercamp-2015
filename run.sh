@@ -31,5 +31,14 @@ echo "Running ezobjectwrapper workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# oo ftw setup
+echo "Running oo ftw workshop setup..."
+( cd workshops/oo-ftw &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/oo-ftw/installation/vhost /etc/apache2/sites-enabled/oo-ftw.conf &&
+  sudo sh ./installation/run.sh
+)
+
 echo "Reloading apache..."
 sudo service apache2 reload
