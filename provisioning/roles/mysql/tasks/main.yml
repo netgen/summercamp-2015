@@ -66,8 +66,6 @@
   tags: [mysql]
 
 - name: Create user for workshop databases and grant privileges
-  mysql_user: name={{ USERNAME }} password={{ PASSWORD }} priv={{ item }}.*:ALL,GRANT state=present
-  with_items: WORKSHOP_DATABASES
+  mysql_user: name={{ USERNAME }} password={{ PASSWORD }} priv=*.*:ALL,GRANT state=present
   environment: env
-  when: WORKSHOP_DATABASES|lower != 'none'
   tags: [mysql]
