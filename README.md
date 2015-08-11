@@ -73,9 +73,11 @@ After the initial virtual machine build, you will not need to use this.
 ***IMPORTANT***
 
 If vagrant starts complaining about locale and crashes the provisioning, in
-/etc/ssh/ssh_config (or equivalent) comment out
+~/.bash_profile (or equivalent) add
+
 ```
-SendEnv LANG LC_*
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 ```
 
 ## Windows Support
