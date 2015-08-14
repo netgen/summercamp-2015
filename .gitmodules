@@ -7,3 +7,7 @@
 [submodule "workshops/oo-ftw"]
 	path = workshops/oo-ftw
 	url = git@github.com:weaverryan/php-summercamp-oo.git
+[submodule "workshops/httpcache"]
+	path = workshops/httpcache
+	url = git@gitlab.com:dbu/varnish-workshop.git
+	branch = php-summercamp
