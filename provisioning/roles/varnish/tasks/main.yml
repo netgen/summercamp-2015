@@ -12,11 +12,8 @@
 - name: Install Varnish.
   apt: name=varnish state=installed
 
-- name: Copy Varnish init.d script to defaults
+- name: Copy Varnish defaults script to defaults
   template: src=varnish-init.j2 dest=/etc/default/varnish owner=root group=root mode=0755
-
-- name: Copy Varnish init.d script
-  template: src=varnish-init.j2 dest=/etc/init.d/varnish owner=root group=root mode=0755
 
 - name: Update update-rc.d
   shell: update-rc.d varnish defaults
