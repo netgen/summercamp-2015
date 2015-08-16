@@ -13,3 +13,4 @@ DB_NAME: "summercamp"
 WORKSHOP_DATABASES:
     - ezsylius
     - ezobjwrapper
+    - doctrine
