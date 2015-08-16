@@ -49,13 +49,14 @@ echo "Running doctrine workshop setup..."
   sudo sh ./installation/run.sh
 )
 
-echo "Running httpcache workshop setup..."
-( cd workshops/httpcache &&
-  git checkout php-summercamp &&
-  git pull origin php-summercamp &&
-  sudo ln -sf /var/www/summercamp/workshops/httpcache/installation/vhost /etc/apache2/sites-enabled/httpcache.conf &&
-  sudo sh ./installation/run.sh
-)
+# httpcache setup
+#echo "Running httpcache workshop setup..."
+#( cd workshops/httpcache &&
+#  git checkout php-summercamp &&
+#  git pull origin php-summercamp &&
+#  sudo ln -sf /var/www/summercamp/workshops/httpcache/installation/vhost /etc/apache2/sites-enabled/httpcache.conf &&
+#  sudo sh ./installation/run.sh
+#)
 
 echo "Reloading apache..."
 sudo service apache2 reload

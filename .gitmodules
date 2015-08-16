@@ -10,7 +10,3 @@
 [submodule "workshops/doctrine"]
 	path = workshops/doctrine
 	url = git@github.com:umpirsky/phpsummercamp-doctrine.git
-[submodule "workshops/httpcache"]
-	path = workshops/httpcache
-	url = git@gitlab.com:dbu/varnish-workshop.git
-	branch = php-summercamp
