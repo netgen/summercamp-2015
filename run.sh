@@ -40,6 +40,15 @@ echo "Running oo ftw workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# docrine setup
+echo "Running doctrine workshop setup..."
+( cd workshops/doctrine &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/doctrine/installation/vhost /etc/apache2/sites-enabled/doctrine.conf &&
+  sudo sh ./installation/run.sh
+)
+
 echo "Running httpcache workshop setup..."
 ( cd workshops/httpcache &&
   git checkout php-summercamp &&
