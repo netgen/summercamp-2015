@@ -58,5 +58,14 @@ echo "Running httpcache workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# ez performance setup
+echo "Running ez performance workshop setup..."
+( cd workshops/ez-performance &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/ez-performance/installation/vhost /etc/apache2/sites-enabled/performance.conf &&
+  sudo sh ./installation/run.sh
+)
+
 echo "Reloading apache..."
 sudo service apache2 reload
