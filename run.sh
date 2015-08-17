@@ -58,5 +58,14 @@ echo "Running httpcache workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# ezsolr setup
+echo "Running esolr workshop setup..."
+( cd workshops/ezsolr &&
+  git checkout ezsc &&
+  git pull origin ezsc &&
+  sudo ln -sf /var/www/summercamp/workshops/ezsolr/installation/vhost /etc/apache2/sites-enabled/ezsolr.conf &&
+  sudo sh ./installation/run.sh
+)
+
 echo "Reloading apache..."
 sudo service apache2 reload
