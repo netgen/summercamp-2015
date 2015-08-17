@@ -13,3 +13,6 @@
 [submodule "workshops/oop"]
 	path = workshops/oop
 	url = git@github.com:weaverryan/php-summercamp-oo.git
+[submodule "workshops/ez-performance"]
+	path = workshops/ez-performance
+	url = https://github.com/kuborgh/ezsc15.git
