@@ -1,7 +1,4 @@
 ---
-- name: Ensure dependencies are installed.
-  apt: pkg=curl state=installed
-
 - name: Add Jenkins apt repository key.
   apt_key:
     url: "http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key"
