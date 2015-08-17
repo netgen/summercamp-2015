@@ -9,6 +9,10 @@
   unarchive: src=/tmp/solr-4.10.3.tgz dest=/tmp copy=no group=vagrant owner=vagrant
   tags: [solr]
 
-- name: Move Solt to /opt/solr
+- name: Move Solr to /opt/solr
   shell: mv /tmp/solr-4.10.3 /opt/solr
+  tags: [solr]
+
+- name: Cleanup after oneself
+  shell: rm /tmp/solr-4.10.3.tgz
   tags: [solr]
