@@ -16,3 +16,7 @@
 [submodule "workshops/ezsolr"]
 	path = workshops/ezsolr
 	url = git@github.com:pspanja/ezplatform.git
+[submodule "workshops/ci"]
+	path = workshops/ci
+	url = git@github.com:ideatosrl/phpsummercamp-ci.git
+	branch = phpsummercamp
