@@ -10,6 +10,11 @@
   when: ansible_os_family == "Debian"
   tags: [packages]
 
+- name: Install the openjdk-7-jdk (APT)
+  apt: name=openjdk-7-jdk state=latest update_cache=yes
+  when: ansible_os_family == "Debian"
+  tags: [packages]
+
 - name: Set timezone variables
   copy: content={{ PROJECT_TIMEZONE }}
         dest={{ timezone_destination_path }}
