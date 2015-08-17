@@ -10,7 +10,7 @@
   tags: [solr]
 
 - name: Move Solr to /opt/solr
-  shell: mv /tmp/solr-4.10.3 /opt/solr
+  shell: rm -rf /opt/solr && mv /tmp/solr-4.10.3 /opt/solr
   tags: [solr]
 
 - name: Cleanup after oneself
