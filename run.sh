@@ -59,7 +59,7 @@ echo "Running httpcache workshop setup..."
 )
 
 # ezsolr setup
-echo "Running esolr workshop setup..."
+echo "Running ezsolr workshop setup..."
 ( cd workshops/ezsolr &&
   git checkout ezsc &&
   git pull origin ezsc &&
