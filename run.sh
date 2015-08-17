@@ -22,21 +22,21 @@ echo "Running ezsylius workshop setup..."
   sudo sh ./installation/run.sh
 )
 
-# ezobjectwrapper setup
-echo "Running ezobjectwrapper workshop setup..."
-( cd workshops/ezobjectwrapper &&
+# ezobjwrapper setup
+echo "Running ezobjwrapper workshop setup..."
+( cd workshops/ezobjwrapper &&
   git checkout master &&
   git pull origin master &&
-  sudo ln -sf /var/www/summercamp/workshops/ezobjectwrapper/installation/vhost /etc/apache2/sites-enabled/ezobjectwrapper.conf &&
+  sudo ln -sf /var/www/summercamp/workshops/ezobjwrapper/installation/vhost /etc/apache2/sites-enabled/ezobjwrapper.conf &&
   sudo sh ./installation/run.sh
 )
 
-# oo ftw setup
-echo "Running oo ftw workshop setup..."
-( cd workshops/oo-ftw &&
+# oop setup
+echo "Running oop workshop setup..."
+( cd workshops/oop &&
   git checkout master &&
   git pull origin master &&
-  sudo ln -sf /var/www/summercamp/workshops/oo-ftw/installation/vhost /etc/apache2/sites-enabled/oo-ftw.conf &&
+  sudo ln -sf /var/www/summercamp/workshops/oop/installation/vhost /etc/apache2/sites-enabled/oop.conf &&
   sudo sh ./installation/run.sh
 )
 
