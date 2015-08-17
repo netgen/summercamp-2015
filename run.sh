@@ -64,6 +64,8 @@ echo "Running ezsolr workshop setup..."
   git checkout ezsc &&
   git pull origin ezsc &&
   sudo ln -sf /var/www/summercamp/workshops/ezsolr/installation/vhost /etc/apache2/sites-enabled/ezsolr.conf &&
+  sudo sh ./installation/run.sh
+)
 
 # ci setup
 echo "Running continuous integration workshop setup..."
