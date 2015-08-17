@@ -1,11 +1,11 @@
 ---
 # tasks file for solr
 
-- name: Download Solr 10.4.3
+- name: Download Solr 4.10.3
   get_url: url=http://archive.apache.org/dist/lucene/solr/4.10.3/solr-4.10.3.tgz dest=/tmp/solr-4.10.3.tgz
   tags: [solr]
 
-- name: Unpack Solr 10.4.3
+- name: Unpack Solr 4.10.3
   unarchive: src=/tmp/solr-4.10.3.tgz dest=/tmp copy=no group=vagrant owner=vagrant
   tags: [solr]
 
