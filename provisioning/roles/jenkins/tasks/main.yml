@@ -1,0 +1,41 @@
+---
+- name: Ensure dependencies are installed.
+  apt: pkg=curl state=installed
+
+- name: Add Jenkins apt repository key.
+  apt_key:
+    url: "http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key"
+    state: present
+
+- name: Add Jenkins apt repository.
+  apt_repository:
+    repo: "deb http://pkg.jenkins-ci.org/debian binary/"
+    state: present
+    update_cache: yes
+
+- name: Ensure Jenkins is installed.
+  apt: pkg=jenkins state=installed
+
+# Make sure Jenkins starts, then configure Jenkins.
+- name: Ensure Jenkins is started and runs on startup.
+  service: name=jenkins state=started enabled=yes
+
+- name: Wait for Jenkins to start up before proceeding.
+  shell: curl --head --silent http://localhost:8080/cli/
+  register: result
+  until: result.stdout.find("200 OK") != -1
+  retries: "60"
+  delay: "5"
+  changed_when: false
+
+- name: Get the jenkins-cli jarfile from the Jenkins server.
+  get_url:
+    url: "http://localhost:8080/jnlpJars/jenkins-cli.jar"
+    dest: "/opt/jenkins-cli.jar"
+  register: jarfile_get
+  until: "'OK' in jarfile_get.msg or 'file already exists' in jarfile_get.msg"
+  retries: 5
+  delay: 10
+
+# Update Jenkins and install configured plugins.
+- include: plugins.yml
