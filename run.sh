@@ -70,6 +70,7 @@ echo "Running continuous integration workshop setup..."
 ( cd workshops/ci &&
   git checkout phpsummercamp &&
   git pull origin phpsummercamp &&
+  sudo ln -sf /var/www/summercamp/workshops/ci/installation/vhost /etc/apache2/sites-enabled/ci.conf &&
   sudo sh ./installation/run.sh
 )
 

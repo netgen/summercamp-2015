@@ -19,4 +19,3 @@
 [submodule "workshops/ci"]
 	path = workshops/ci
 	url = git@github.com:ideatosrl/phpsummercamp-ci.git
-	branch = phpsummercamp
