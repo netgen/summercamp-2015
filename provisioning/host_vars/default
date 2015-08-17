@@ -14,3 +14,20 @@ WORKSHOP_DATABASES:
     - ezsylius
     - ezobjwrapper
     - doctrine
+    - ezplatform
+    - ezplatformui
+    - ezmulticolors
+    - ez5perf
+    - ezbolt
+    - ezsolr
+    - ci
+    - oop
+    - modernising
+    - frontend
+    - loose
+    - lionframe
+    - puli
+    - modelling
+    - profiling
+    - symfony3
+    - apigility
