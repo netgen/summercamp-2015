@@ -1,15 +1,15 @@
 [submodule "workshops/ezpublish-community-sylius"]
 	path = workshops/ezpublish-community-sylius
 	url = git@github.com:ilukac/ezpublish-community-sylius.git
-[submodule "workshops/ezobjectwrapper"]
-	path = workshops/ezobjectwrapper
-	url = git@github.com:kaliop/ezobjectwrapper-workshop.git
-[submodule "workshops/oo-ftw"]
-	path = workshops/oo-ftw
-	url = git@github.com:weaverryan/php-summercamp-oo.git
 [submodule "workshops/doctrine"]
 	path = workshops/doctrine
 	url = git@github.com:umpirsky/phpsummercamp-doctrine.git
 [submodule "workshops/httpcache"]
 	path = workshops/httpcache
 	url = https://gitlab.com/dbu/varnish-workshop.git
+[submodule "workshops/ezobjwrapper"]
+	path = workshops/ezobjwrapper
+	url = git@github.com:kaliop/ezobjectwrapper-workshop.git
+[submodule "workshops/oop"]
+	path = workshops/oop
+	url = git@github.com:weaverryan/php-summercamp-oo.git
