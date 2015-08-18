@@ -84,6 +84,47 @@ export LANG=en_US.UTF-8
 
 Shell script will run from within the vm to provision the setup
 
+## Hosts setup
+
+You will need to add the following to your hosts file
+
+```
+172.21.12.10 ezsylius.ezsc
+172.21.12.10 ezplatform.ezsc
+172.21.12.10 ezplatformui.ezsc
+172.21.12.10 ezmulticolors.ezsc
+172.21.12.10 ez5perf.ezsc
+172.21.12.10 ezbolt.ezsc
+172.21.12.10 ezsolr.ezsc
+172.21.12.10 ezobjwrapper.ezsc
+172.21.12.10 doctrine.phpsc
+172.21.12.10 ci.phpsc
+172.21.12.10 oop.phpsc
+172.21.12.10 modernising.phpsc
+172.21.12.10 frontend.phpsc
+172.21.12.10 loose.phpsc
+172.21.12.10 lionframe.phpsc
+172.21.12.10 httpcache.phpsc
+172.21.12.10 puli.phpsc
+172.21.12.10 modelling.phpsc
+172.21.12.10 profiling.phpsc
+172.21.12.10 symfony3.phpsc
+172.21.12.10 apigility.phpsc
+```
+
+Linux/MacOS systems location of the hosts file is
+```
+/etc/hosts
+```
+
+Location on Windows systems is along the lines of
+```
+C:\Windows\System32\Drivers\etc\hosts
+```
+
+You may be required to use admin privileges to edit the hosts file.
+
+
 [Vagrant]: http://www.vagrantup.com/downloads.html
 [Ansible]: http://docs.ansible.com/intro_installation.html
 [VirtualBox]: https://www.virtualbox.org/wiki/Downloads

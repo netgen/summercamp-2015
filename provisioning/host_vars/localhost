@@ -31,3 +31,26 @@ WORKSHOP_DATABASES:
     - profiling
     - symfony3
     - apigility
+
+HOSTS:
+    - ezsylius.ezsc
+    - ezplatform.ezsc
+    - ezplatformui.ezsc
+    - ezmulticolors.ezsc
+    - ez5perf.ezsc
+    - ezbolt.ezsc
+    - ezsolr.ezsc
+    - ezobjwrapper.ezsc
+    - doctrine.phpsc
+    - ci.phpsc
+    - oop.phpsc
+    - modernising.phpsc
+    - frontend.phpsc
+    - loose.phpsc
+    - lionframe.phpsc
+    - httpcache.phpsc
+    - puli.phpsc
+    - modelling.phpsc
+    - profiling.phpsc
+    - symfony3.phpsc
+    - apigility.phpsc
