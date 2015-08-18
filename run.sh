@@ -76,5 +76,14 @@ echo "Running continuous integration workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# loose setup
+echo "Running loose workshop setup..."
+( cd workshops/loose &&
+  git checkout php-summercamp &&
+  git pull origin php-summercamp &&
+  sudo ln -sf /var/www/summercamp/workshops/loose/installation/vhost /etc/apache2/sites-enabled/loose.conf &&
+  sudo sh ./installation/run.sh
+)
+
 echo "Reloading apache..."
 sudo service apache2 reload
