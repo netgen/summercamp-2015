@@ -26,3 +26,6 @@
 [submodule "workshops/puli"]
 	path = workshops/puli
 	url = git@bitbucket.org:webmozart/puli-workshop.git
+[submodule "workshops/ezbolt"]
+	path = workshops/ezbolt
+	url = git@github.com:janit/ezbolt

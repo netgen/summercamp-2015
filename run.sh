@@ -107,6 +107,15 @@ echo "Running puli workshop setup..."
   fi
 )
 
+# ezbolt setup
+echo "Running ezbolt workshop setup..."
+( cd workshops/ezbolt &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/ezbolt/installation/vhost /etc/apache2/sites-enabled/ezbolt.conf &&
+  sudo sh ./installation/run.sh
+)
+
 source ~/.bashrc
 
 echo "Reloading apache..."
