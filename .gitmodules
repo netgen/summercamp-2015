@@ -16,3 +16,13 @@
 [submodule "workshops/ez-performance"]
 	path = workshops/ez-performance
 	url = https://github.com/kuborgh/ezsc15.git
+[submodule "workshops/ezsolr"]
+	path = workshops/ezsolr
+	url = git@github.com:pspanja/ezplatform.git
+[submodule "workshops/ci"]
+	path = workshops/ci
+	url = git@github.com:ideatosrl/phpsummercamp-ci.git
+[submodule "workshops/loose"]
+	path = workshops/loose
+	url = git@github.com:jakzal/symfony-demo.git
+	branch = php-summercamp

@@ -58,6 +58,33 @@ echo "Running httpcache workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# ezsolr setup
+echo "Running ezsolr workshop setup..."
+( cd workshops/ezsolr &&
+  git checkout ezsc &&
+  git pull origin ezsc &&
+  sudo ln -sf /var/www/summercamp/workshops/ezsolr/installation/vhost /etc/apache2/sites-enabled/ezsolr.conf &&
+  sudo sh ./installation/run.sh
+)
+
+# ci setup
+echo "Running continuous integration workshop setup..."
+( cd workshops/ci &&
+  git checkout phpsummercamp &&
+  git pull origin phpsummercamp &&
+  sudo ln -sf /var/www/summercamp/workshops/ci/installation/vhost /etc/apache2/sites-enabled/ci.conf &&
+  sudo sh ./installation/run.sh
+)
+
+# loose setup
+echo "Running loose workshop setup..."
+( cd workshops/loose &&
+  git checkout php-summercamp &&
+  git pull origin php-summercamp &&
+  sudo ln -sf /var/www/summercamp/workshops/loose/installation/vhost /etc/apache2/sites-enabled/loose.conf &&
+  sudo sh ./installation/run.sh
+)
+
 # ez performance setup
 echo "Running ez performance workshop setup..."
 ( cd workshops/ez-performance &&

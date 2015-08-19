@@ -1,0 +1,12 @@
+---
+# jenkins_hostname: localhost
+# jenkins_jar_location: /opt/jenkins-cli.jar
+jenkins_plugins:
+  - git
+  - ssh
+  - clover
+  - greenballs
+  - multi-branch-project-plugin
+  - statusmonitor
+  - jdepend
+  - checkstyle

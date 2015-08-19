@@ -12,8 +12,20 @@
     - { role: mysql, use_mysql56: false, use_mysql_dev: true }
     - { role: composer, use_composer_no_dev: no, install_vendors: false }
     - { role: mailcatcher }
+    - solr
+    - jenkins
 
   tasks:
+    # Idempotent way to build a /etc/hosts file with Ansible.
+    # Inspired from http://xmeblog.blogspot.com/2013/06/ansible-dynamicaly-update-etchosts.html
+    - name: "Build hosts file"
+      lineinfile:   dest=/etc/hosts
+                    regexp='.*{{ item }}$'
+                    line="127.0.0.1 {{item}}"
+                    state=present
+      with_items: HOSTS
+      when: HOSTS is defined
+
     - name: restart Apache
       service: name=apache2 state=restarted
       sudo: yes
