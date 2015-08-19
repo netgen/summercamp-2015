@@ -108,4 +108,4 @@ echo "Running puli workshop setup..."
 source ~/.bashrc
 
 echo "Reloading apache..."
-sudo service apache2 reload
+sudo service apache2 restart
