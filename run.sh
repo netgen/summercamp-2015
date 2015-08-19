@@ -13,6 +13,15 @@ composer config -g github-oauth.github.com "${EZ_GITHUB_TOKEN_A}${EZ_GITHUB_TOKE
 git submodule init
 git submodule update
 
+# ezbolt setup
+echo "Running ezbolt workshop setup..."
+( cd workshops/ezbolt &&
+  git checkout ezsc &&
+  git pull origin ezsc &&
+  sudo ln -sf /var/www/summercamp/workshops/ezbolt/installation/vhost /etc/apache2/sites-enabled/ezbolt.conf &&
+  sudo sh ./installation/run.sh
+)
+
 # ezsylius setup
 echo "Running ezsylius workshop setup..."
 ( cd workshops/ezpublish-community-sylius &&
