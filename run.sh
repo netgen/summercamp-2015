@@ -16,8 +16,8 @@ git submodule update
 # ezbolt setup
 echo "Running ezbolt workshop setup..."
 ( cd workshops/ezbolt &&
-  git checkout ezsc &&
-  git pull origin ezsc &&
+  git checkout master &&
+  git pull origin master &&
   sudo ln -sf /var/www/summercamp/workshops/ezbolt/installation/vhost /etc/apache2/sites-enabled/ezbolt.conf &&
   sudo sh ./installation/run.sh
 )
