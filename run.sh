@@ -85,5 +85,29 @@ echo "Running loose workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# puli workshop
+# the conditional adding to .bashrc could be written better, but this works
+# make sure puli.phar is in place before bin/install, and then do it again to use latest,
+# otherwise <warn>The "puli"/"puli.phar" command could not be found.</warn> happens and then
+# Generating autoload files
+# PHP Fatal error:  Call to a member function run() on null in /var/www/summercamp/workshops/puli/acme-app1/vendor/puli/composer-plugin/src/PuliPlugin.php on line 446
+# Fatal error: Call to a member function run() on null in /var/www/summercamp/workshops/puli/acme-app1/vendor/puli/composer-plugin/src/PuliPlugin.php on line 446
+echo "Running puli workshop setup..."
+( cd workshops/puli &&
+  git checkout master &&
+  git pull origin master && 
+  sudo cp bin/puli.phar /usr/local/bin/puli &&
+  sudo chmod a+x /usr/local/bin/puli &&
+  ./bin/install &&
+  sudo cp bin/puli.phar /usr/local/bin/puli &&
+  sudo chmod a+x /usr/local/bin/puli &&
+  if ! grep -qe "^alias puli" /home/vagrant/.bashrc; then
+    echo "# Disable glob expansion for Puli" >> "/home/vagrant/.bashrc"
+    echo "alias puli='set -f;puli';puli(){ command puli "$@";set +f;}" >> "/home/vagrant/.bashrc"
+  fi
+)
+
+source ~/.bashrc
+
 echo "Reloading apache..."
-sudo service apache2 reload
+sudo service apache2 restart
