@@ -13,15 +13,6 @@ composer config -g github-oauth.github.com "${EZ_GITHUB_TOKEN_A}${EZ_GITHUB_TOKE
 git submodule init
 git submodule update
 
-# ezbolt setup
-echo "Running ezbolt workshop setup..."
-( cd workshops/ezbolt &&
-  git checkout master &&
-  git pull origin master &&
-  sudo ln -sf /var/www/summercamp/workshops/ezbolt/installation/vhost /etc/apache2/sites-enabled/ezbolt.conf &&
-  sudo sh ./installation/run.sh
-)
-
 # ezsylius setup
 echo "Running ezsylius workshop setup..."
 ( cd workshops/ezpublish-community-sylius &&
@@ -114,6 +105,15 @@ echo "Running puli workshop setup..."
     echo "# Disable glob expansion for Puli" >> "/home/vagrant/.bashrc"
     echo "alias puli='set -f;puli';puli(){ command puli "$@";set +f;}" >> "/home/vagrant/.bashrc"
   fi
+)
+
+# ezbolt setup
+echo "Running ezbolt workshop setup..."
+( cd workshops/ezbolt &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/ezbolt/installation/vhost /etc/apache2/sites-enabled/ezbolt.conf &&
+  sudo sh ./installation/run.sh
 )
 
 source ~/.bashrc
