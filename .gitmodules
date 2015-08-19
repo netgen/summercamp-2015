@@ -23,3 +23,6 @@
 	path = workshops/loose
 	url = git@github.com:jakzal/symfony-demo.git
 	branch = php-summercamp
+[submodule "workshops/puli"]
+	path = workshops/puli
+	url = git@bitbucket.org:webmozart/puli-workshop.git
