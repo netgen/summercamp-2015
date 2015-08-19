@@ -94,6 +94,8 @@ echo "Running loose workshop setup..."
 # Fatal error: Call to a member function run() on null in /var/www/summercamp/workshops/puli/acme-app1/vendor/puli/composer-plugin/src/PuliPlugin.php on line 446
 echo "Running puli workshop setup..."
 ( cd workshops/puli &&
+  git checkout master &&
+  git pull origin master && 
   sudo cp bin/puli.phar /usr/local/bin/puli &&
   sudo chmod a+x /usr/local/bin/puli &&
   ./bin/install &&
