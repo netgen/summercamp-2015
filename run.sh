@@ -132,7 +132,7 @@ sudo npm cache clear
   git checkout master &&
   git pull origin master &&
   sudo ln -sf /var/www/summercamp/workshops/frontend/installation/vhost /etc/apache2/sites-enabled/frontend.conf &&
-  sudo sh ./installation/run.sh
+  sh ./installation/run.sh
 )
 
 # lionframe setup
