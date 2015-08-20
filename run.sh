@@ -104,7 +104,7 @@ echo "Running ez performance workshop setup..."
 echo "Running puli workshop setup..."
 ( cd workshops/puli &&
   git checkout master &&
-  git pull origin master && 
+  git pull origin master &&
   sudo cp bin/puli.phar /usr/local/bin/puli &&
   sudo chmod a+x /usr/local/bin/puli &&
   ./bin/install &&
@@ -122,6 +122,15 @@ echo "Running ezbolt workshop setup..."
   git checkout master &&
   git pull origin master &&
   sudo ln -sf /var/www/summercamp/workshops/ezbolt/installation/vhost /etc/apache2/sites-enabled/ezbolt.conf &&
+  sudo sh ./installation/run.sh
+)
+
+# lionframe setup
+echo "Running lionframe workshop setup..."
+( cd workshops/lionframe &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/lionframe/installation/vhost /etc/apache2/sites-enabled/lionframe.conf &&
   sudo sh ./installation/run.sh
 )
 
