@@ -32,6 +32,9 @@
 [submodule "workshops/ezbolt"]
 	path = workshops/ezbolt
 	url = git@github.com:janit/ezbolt
+[submodule "workshops/frontend"]
+	path = workshops/frontend
+	url = git@github.com:dbrekalo/php-summercamp-2015.git
 [submodule "workshops/lionframe"]
 	path = workshops/lionframe
 	url = git@github.com:michalmarcinkowski/php-summercamp-2015-rapid-api.git
