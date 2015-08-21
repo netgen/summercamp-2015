@@ -38,3 +38,6 @@
 [submodule "workshops/modelling"]
 	path = workshops/modelling
 	url = git@github.com:pjedrzejewski/php-summercamp-modelling-by-example.git
+[submodule "workshops/modernising"]
+	path = workshops/modernising
+	url = git@github.com:mareg/legacy-summercamp-2015.git
