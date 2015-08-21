@@ -143,6 +143,15 @@ echo "Running modelling workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# modernisisng setup
+echo "Running modernisisng workshop setup..."
+( cd workshops/modernisisng &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/modernisisng/installation/vhost /etc/apache2/sites-enabled/modernisisng.conf &&
+  sudo sh ./installation/run.sh
+)
+
 source ~/.bashrc
 
 echo "Reloading apache..."
