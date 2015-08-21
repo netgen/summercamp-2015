@@ -134,6 +134,15 @@ echo "Running lionframe workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# modelling setup
+echo "Running modelling workshop setup..."
+( cd workshops/modelling &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/modelling/installation/vhost /etc/apache2/sites-enabled/modelling.conf &&
+  sudo sh ./installation/run.sh
+)
+
 source ~/.bashrc
 
 echo "Reloading apache..."
