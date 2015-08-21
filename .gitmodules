@@ -35,3 +35,6 @@
 [submodule "workshops/lionframe"]
 	path = workshops/lionframe
 	url = git@github.com:michalmarcinkowski/php-summercamp-2015-rapid-api.git
+[submodule "workshops/modelling"]
+	path = workshops/modelling
+	url = git@github.com:pjedrzejewski/php-summercamp-modelling-by-example.git
