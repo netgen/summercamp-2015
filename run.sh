@@ -152,6 +152,15 @@ echo "Running modernising workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# apigility setup
+echo "Running apigility workshop setup..."
+( cd workshops/apigility &&
+  git checkout master &&
+  git pull origin master &&
+  sudo ln -sf /var/www/summercamp/workshops/apigility/installation/vhost /etc/apache2/sites-enabled/apigility.conf &&
+  sudo sh ./installation/run.sh
+)
+
 source ~/.bashrc
 
 echo "Reloading apache..."

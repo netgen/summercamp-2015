@@ -41,3 +41,6 @@
 [submodule "workshops/modernising"]
 	path = workshops/modernising
 	url = git@github.com:mareg/legacy-summercamp-2015.git
+[submodule "workshops/apigility"]
+	path = workshops/apigility
+	url = git@github.com:ezimuel/php-summercamp-apigility.git
