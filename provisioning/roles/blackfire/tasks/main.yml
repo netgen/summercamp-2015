@@ -1,0 +1,22 @@
+---
+# tasks file for blackfire
+- name: Add the packagecloud signing keys
+  apt_key: url=https://packagecloud.io/gpg.key state=present
+  tags: [blackfire, packages]
+
+- name: Add Blackfire repo
+  # Add specified repository into sources list.
+  apt_repository: repo='deb http://packages.blackfire.io/debian any main' state=present update_cache=yes
+  when: ansible_os_family == "Debian"
+  tags: [blackfire, packages]
+
+- name: Install Blackfire agent and php
+  apt: name={{ item }} state=latest update_cache=yes
+  with_items:
+    - blackfire-agent
+    - blackfire-php
+  tags: [blackfire, packages]
+
+- name: Stop the Blackfire agent service
+  service: name=blackfire-agent state=stopped
+  sudo: yes
