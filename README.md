@@ -25,7 +25,7 @@ The local development is meant to be used in a vagrant provisioned base box.
 
 The provisioner for the project is ansible.
 
-Once you have the prerequisites setup, you can run the
+Once you have the prerequisites setup, clone the repo, and from the cloned repo directory run the
 ```
 vagrant up --no-provision
 ```
@@ -35,7 +35,7 @@ from you terminal to start the process up.
 ***IMPORTANT***
 note the `--no-provision` switch
 
-This will download the basebox and start it up, as everything is already installed, there is no need for procisioning
+This will download the basebox and start it up, as everything is already installed, there is no need for provisioning
 hence the `--no-provision` switch
 
 If you do not see an error message, go get yourself a cup of coffee or your favorite beverage,
@@ -48,7 +48,7 @@ If you start seeing the connection timeout after adding of the private key
     default: Warning: Connection timeout. Retrying...
     default: Warning: Connection timeout. Retrying...
 ```
-You should open up the Virtualbox, click the vm running (name should be along the lines of 4cinc-thinkfasttoys....)
+You should open up the Virtualbox, click the vm running (name should be along the lines of netgen-summercamp2015....)
 and reset it (on OSX it is cmd+t). This is due to some weird bug somewhere on intersection of vagrant, virtualbox and
 this ubuntu cloud image.
 After the initial virtual machine build, you will not need to use this.
