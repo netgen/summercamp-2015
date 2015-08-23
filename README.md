@@ -1,7 +1,7 @@
-Summercamp 2015 Vagrant Box
-===========================
+Summercamp 2015 Vagrant Base Box
+================================
 
-Vagrant box, with Ansible provisioning to setup all that is required for Summercamp 2015.
+Vagrant base box, with Ansible pull based provisioning to setup all that is required for Summercamp 2015.
 
 ## Authors
 
@@ -10,8 +10,6 @@ Vagrant box, with Ansible provisioning to setup all that is required for Summerc
 - [Edi Modric]
 
 ## Prerequisites
-
-You need to be using either OSX or linux as your OS.
 
 You need to have following installed:
 - [Vagrant]
