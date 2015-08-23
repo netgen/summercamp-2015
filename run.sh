@@ -147,9 +147,10 @@ echo "Running modelling workshop setup..."
 echo "Running modernising workshop setup..."
 ( cd workshops/modernising &&
   git checkout master &&
-  git pull origin master &&
-  sudo ln -sf /var/www/summercamp/workshops/modernising/installation/vhost /etc/apache2/sites-enabled/modernising.conf &&
-  sudo sh ./installation/run.sh
+  git pull origin master
+#  git pull origin master &&
+#  sudo ln -sf /var/www/summercamp/workshops/modernising/installation/vhost /etc/apache2/sites-enabled/modernising.conf &&
+#  sudo sh ./installation/run.sh
 )
 
 # apigility setup
