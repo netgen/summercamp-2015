@@ -47,3 +47,6 @@
 [submodule "workshops/ezplatform"]
 	path = workshops/ezplatform
 	url = git@github.com:ezsystems/ezsc2015-beginner-tutorial.git
+[submodule "workshops/ezplatformui"]
+	path = workshops/ezplatformui
+	url = git@github.com:bdunogier/ezplatform.git

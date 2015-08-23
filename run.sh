@@ -166,6 +166,13 @@ echo "Running ezplatform workshop setup..."
   git pull origin master
 )
 
+# ezplatformui setup
+echo "Running ezplatformui workshop setup..."
+( cd workshops/ezplatformui &&
+  git checkout ezsc2015 &&
+  git pull origin ezsc2015
+)
+
 source ~/.bashrc
 
 echo "Reloading apache..."
