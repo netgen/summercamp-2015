@@ -130,9 +130,7 @@ echo "Running frontend workshop setup..."
 sudo npm cache clear
 ( cd workshops/frontend &&
   git checkout master &&
-  git pull origin master &&
-  sudo ln -sf /var/www/summercamp/workshops/frontend/installation/vhost /etc/apache2/sites-enabled/frontend.conf &&
-  sh ./installation/run.sh
+  git pull origin master
 )
 
 # lionframe setup
