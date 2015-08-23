@@ -19,7 +19,7 @@ The minimum recommended version of vagrant at the time of writng is 1.7.3
 
 With these versions you can use Virtualbox 4.x or 5.x
 
-## Local development setup
+## Workshop Virtual Machine Setup
 
 The local development is meant to be used in a vagrant provisioned box.
 
@@ -71,7 +71,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
-## Hosts setup
+## Hosts Setup
 
 You will need to add the following to your hosts file
 
@@ -111,7 +111,7 @@ C:\Windows\System32\Drivers\etc\hosts
 
 You may be required to use admin privileges to edit the hosts file.
 
-## Workshop setup
+## Workshop Setup
 
 For your convenience there is a `run.sh` script available in the root of the summercamp vm
 ```
@@ -144,7 +144,19 @@ profiling
 symfony3
 ```
 
-so you could run
+To run it, you need to ssh into your vm by using 
+
+```
+vagrant ssh
+```
+
+Once you are logged in to your vm, execute
+
+```
+cd /var/www/summercamp/
+```
+
+and then you can execute
 
 ```
 ./run.sh ezsylius
