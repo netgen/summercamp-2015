@@ -13,8 +13,6 @@ Vagrant box, with Ansible provisioning to setup all that is required for Summerc
 
 You need to be using either OSX or linux as your OS.
 
-If you are using Windows, let me know so I can take a look how to setup the ansible-pull (and if it is possible)
-
 You need to have following installed:
 - [Vagrant]
 - [Ansible]
@@ -41,6 +39,8 @@ The recommended version of Ansible at the time of writing is 1.8.4.
 The minimum recommended version of vagrant at the time of writng is 1.7.3
 
 With these versions you can use Virtualbox 4.x or 5.x
+
+For windows users we have a windows.sh script prepared, that vagrant will use to provision from within the virtual machine.
 
 ## Local development setup
 
