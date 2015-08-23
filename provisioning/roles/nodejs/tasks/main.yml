@@ -23,3 +23,15 @@
     - uglify-js
     - uglifycss
   tags: [nodejs, packages]
+
+- name: install bower
+  npm: name=bower global=yes state=latest
+  tags: [nodejs, packages]
+
+- name: install grunt
+  npm: name=grunt-cli global=yes state=latest
+  tags: [nodejs, packages]
+
+- name: install sass
+  gem: name=sass state=latest
+  tags: [nodejs, packages]

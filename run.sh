@@ -125,6 +125,14 @@ echo "Running ezbolt workshop setup..."
   sudo sh ./installation/run.sh
 )
 
+# frontend setup
+echo "Running frontend workshop setup..."
+sudo npm cache clear
+( cd workshops/frontend &&
+  git checkout master &&
+  git pull origin master
+)
+
 # lionframe setup
 echo "Running lionframe workshop setup..."
 ( cd workshops/lionframe &&
