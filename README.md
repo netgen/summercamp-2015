@@ -124,6 +124,47 @@ C:\Windows\System32\Drivers\etc\hosts
 
 You may be required to use admin privileges to edit the hosts file.
 
+## Workshop setup
+
+For your convenience there is a `run.sh` script available in the root of the summercamp vm
+```
+/var/www/summercamp/
+```
+
+You can run it without an argument which will in turn setup all the workshops, or you can run it with workshop name
+as argument, and it will only run setup for that workshop. Possible arguments are
+
+```
+ezsylius
+ezobjwrapper
+oop
+doctrine
+httpcache
+ezsolr
+ci
+loose
+ezperformance
+puli
+ezbolt
+frontend
+lionframe
+modelling
+modernising
+apigility
+ezplatform
+ezplatformui
+profiling
+symfony3
+```
+
+so you could run
+
+```
+./run.sh ezsylius
+```
+
+and only the ezsylius workshop would be installed
+
 
 [Vagrant]: http://www.vagrantup.com/downloads.html
 [Ansible]: http://docs.ansible.com/intro_installation.html
