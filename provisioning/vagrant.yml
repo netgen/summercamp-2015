@@ -14,6 +14,7 @@
     - { role: mailcatcher }
     - solr
     - jenkins
+    - blackfire
 
   tasks:
     # Idempotent way to build a /etc/hosts file with Ansible.
