@@ -4,28 +4,11 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
-module OS
-    def OS.windows?
-        (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
-    end
-
-    def OS.mac?
-        (/darwin/ =~ RUBY_PLATFORM) != nil
-    end
-
-    def OS.unix?
-        !OS.windows?
-    end
-
-    def OS.linux?
-        OS.unix? and not OS.mac?
-    end
-end
-
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty64"
+  # config.vm.box = "netgen/summercamp2015"
+  config.vm.box = "summercamp2015"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -56,18 +39,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "2048"]
   end
 
-  #if OS.windows?
-  #    config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-  #    config.vm.provision :shell, path: "provisioning/windows.sh",
-  #                        :keep_color => true
-
-  #else
-  #  config.vm.provision "ansible" do |ansible|
-  #    ansible.playbook = "provisioning/vagrant.yml"
-  #    # output as much as you can, or comment this out for silence
-  #    ansible.verbose = "vvvv"
-  #    ansible.sudo = true
-  #  end
-  #end
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+  config.vm.provision :shell, path: "provisioning/windows.sh",
+                      :keep_color => true
 
 end

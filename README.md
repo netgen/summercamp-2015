@@ -15,45 +15,30 @@ You need to be using either OSX or linux as your OS.
 
 You need to have following installed:
 - [Vagrant]
-- [Ansible]
 - [VirtualBox]
-
-If you are on linux machine, preferred method of Ansible installation is
-```
-pip install ansible
-```
-
-If you are on an OS X machine, you can install Ansible with brew or pip
-```
-pip install ansible
-
-or
-
-brew install ansible
-```
-
-You should not be cloning the Ansible repo and running it like that.
-
-The recommended version of Ansible at the time of writing is 1.8.4.
 
 The minimum recommended version of vagrant at the time of writng is 1.7.3
 
 With these versions you can use Virtualbox 4.x or 5.x
 
-For windows users we have a windows.sh script prepared, that vagrant will use to provision from within the virtual machine.
-
 ## Local development setup
 
-The local development is meant to be used in a vagrant provisioned box.
+The local development is meant to be used in a vagrant provisioned base box.
 
 The provisioner for the project is ansible.
 
 Once you have the prerequisites setup, you can run the
 ```
-vagrant up
+vagrant up --no-provision
 ```
 
 from you terminal to start the process up.
+
+***IMPORTANT***
+note the `--no-provision` switch
+
+This will download the basebox and start it up, as everything is already installed, there is no need for procisioning
+hence the `--no-provision` switch
 
 If you do not see an error message, go get yourself a cup of coffee or your favorite beverage,
 you deserve it.
@@ -70,6 +55,14 @@ and reset it (on OSX it is cmd+t). This is due to some weird bug somewhere on in
 this ubuntu cloud image.
 After the initial virtual machine build, you will not need to use this.
 
+If for any reason you need to reprovision the vm, you will need to run
+
+```
+vagrant provision
+```
+
+Be carefull with this one, as it takes a LOT of time on slow connection.
+
 ***IMPORTANT***
 
 If vagrant starts complaining about locale and crashes the provisioning, in
@@ -79,10 +72,6 @@ If vagrant starts complaining about locale and crashes the provisioning, in
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
-
-## Windows Support
-
-Shell script will run from within the vm to provision the setup
 
 ## Hosts setup
 
