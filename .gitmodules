@@ -44,3 +44,6 @@
 [submodule "workshops/apigility"]
 	path = workshops/apigility
 	url = git@github.com:ezimuel/php-summercamp-apigility.git
+[submodule "workshops/ezplatform"]
+	path = workshops/ezplatform
+	url = git@github.com:ezsystems/ezsc2015-beginner-tutorial.git

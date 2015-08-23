@@ -148,9 +148,6 @@ echo "Running modernising workshop setup..."
 ( cd workshops/modernising &&
   git checkout master &&
   git pull origin master
-#  git pull origin master &&
-#  sudo ln -sf /var/www/summercamp/workshops/modernising/installation/vhost /etc/apache2/sites-enabled/modernising.conf &&
-#  sudo sh ./installation/run.sh
 )
 
 # apigility setup
@@ -160,6 +157,13 @@ echo "Running apigility workshop setup..."
   git pull origin master &&
   sudo ln -sf /var/www/summercamp/workshops/apigility/installation/vhost /etc/apache2/sites-enabled/apigility.conf &&
   sudo sh ./installation/run.sh
+)
+
+# ezplatform setup
+echo "Running ezplatform workshop setup..."
+( cd workshops/ezplatform &&
+  git checkout master &&
+  git pull origin master
 )
 
 source ~/.bashrc
