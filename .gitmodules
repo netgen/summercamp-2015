@@ -50,3 +50,9 @@
 [submodule "workshops/ezplatformui"]
 	path = workshops/ezplatformui
 	url = git@github.com:bdunogier/ezplatform.git
+[submodule "workshops/profiling"]
+	path = workshops/profiling
+	url = https://github.com/nicolas-grekas/workshop-profiling.git
+[submodule "workshops/symfony3"]
+	path = workshops/symfony3
+	url = git@github.com:nicolas-grekas/workshop-symfony3.git

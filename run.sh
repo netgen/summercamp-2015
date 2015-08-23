@@ -180,6 +180,13 @@ echo "Running profiling workshop setup..."
   git pull origin master
 )
 
+# symfony3 setup
+echo "Running symfony3 workshop setup..."
+( cd workshops/symfony3 &&
+  git checkout master &&
+  git pull origin master
+)
+
 source ~/.bashrc
 
 echo "Reloading apache..."
