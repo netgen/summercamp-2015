@@ -33,3 +33,16 @@
     - name: restart Varnish
       service: name=varnish state=restarted
       sudo: yes
+      # taken from https://juriansluiman.nl/article/151/managing-ssh-known-hosts-with-ansible
+    - name: Make sure the known hosts file exists
+      file: "path=/home/vagrant/.ssh/known_hosts state=touch"
+    - name: Check host name availability
+      shell: "ssh-keygen -f /home/vagrant/.ssh/known_hosts -F {{ item }}"
+      with_items:
+        - github.com
+        - bitbucket.org
+      register: ssh_known_host_results
+    - name: Scan the public key
+      shell: "ssh-keyscan -H -T 10 {{ item.item }} >> /home/vagrant/.ssh/known_hosts"
+      with_items: ssh_known_host_results.results
+      when: item.stdout == ""
