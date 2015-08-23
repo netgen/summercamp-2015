@@ -56,18 +56,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "2048"]
   end
 
-  if OS.windows?
-      config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-      config.vm.provision :shell, path: "provisioning/windows.sh",
-                          :keep_color => true
+  #if OS.windows?
+  #    config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+  #    config.vm.provision :shell, path: "provisioning/windows.sh",
+  #                        :keep_color => true
 
-  else
-    config.vm.provision "ansible" do |ansible|
-      ansible.playbook = "provisioning/vagrant.yml"
-      # output as much as you can, or comment this out for silence
-      ansible.verbose = "vvvv"
-      ansible.sudo = true
-    end
-  end
+  #else
+  #  config.vm.provision "ansible" do |ansible|
+  #    ansible.playbook = "provisioning/vagrant.yml"
+  #    # output as much as you can, or comment this out for silence
+  #    ansible.verbose = "vvvv"
+  #    ansible.sudo = true
+  #  end
+  #end
 
 end
