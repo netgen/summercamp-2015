@@ -21,7 +21,7 @@ With these versions you can use Virtualbox 4.x or 5.x
 
 ## Local development setup
 
-The local development is meant to be used in a vagrant provisioned base box.
+The local development is meant to be used in a vagrant provisioned box.
 
 The provisioner for the project is ansible.
 
