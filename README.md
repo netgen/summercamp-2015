@@ -1,7 +1,7 @@
-Summercamp 2015 Vagrant Box
-===========================
+Summercamp 2015 Vagrant Base Box
+================================
 
-Vagrant box, with Ansible provisioning to setup all that is required for Summercamp 2015.
+Vagrant base box, with Ansible pull based provisioning to setup all that is required for Summercamp 2015.
 
 ## Authors
 
@@ -11,49 +11,32 @@ Vagrant box, with Ansible provisioning to setup all that is required for Summerc
 
 ## Prerequisites
 
-You need to be using either OSX or linux as your OS.
-
 You need to have following installed:
 - [Vagrant]
-- [Ansible]
 - [VirtualBox]
-
-If you are on linux machine, preferred method of Ansible installation is
-```
-pip install ansible
-```
-
-If you are on an OS X machine, you can install Ansible with brew or pip
-```
-pip install ansible
-
-or
-
-brew install ansible
-```
-
-You should not be cloning the Ansible repo and running it like that.
-
-The recommended version of Ansible at the time of writing is 1.8.4.
 
 The minimum recommended version of vagrant at the time of writng is 1.7.3
 
 With these versions you can use Virtualbox 4.x or 5.x
 
-For windows users we have a windows.sh script prepared, that vagrant will use to provision from within the virtual machine.
-
-## Local development setup
+## Workshop Virtual Machine Setup
 
 The local development is meant to be used in a vagrant provisioned box.
 
 The provisioner for the project is ansible.
 
-Once you have the prerequisites setup, you can run the
+Once you have the prerequisites setup, clone the repo, and from the cloned repo directory run the
 ```
-vagrant up
+vagrant up --no-provision
 ```
 
 from you terminal to start the process up.
+
+***IMPORTANT***
+note the `--no-provision` switch
+
+This will download the basebox and start it up, as everything is already installed, there is no need for provisioning
+hence the `--no-provision` switch
 
 If you do not see an error message, go get yourself a cup of coffee or your favorite beverage,
 you deserve it.
@@ -65,10 +48,18 @@ If you start seeing the connection timeout after adding of the private key
     default: Warning: Connection timeout. Retrying...
     default: Warning: Connection timeout. Retrying...
 ```
-You should open up the Virtualbox, click the vm running (name should be along the lines of 4cinc-thinkfasttoys....)
+You should open up the Virtualbox, click the vm running (name should be along the lines of netgen-summercamp2015....)
 and reset it (on OSX it is cmd+t). This is due to some weird bug somewhere on intersection of vagrant, virtualbox and
 this ubuntu cloud image.
 After the initial virtual machine build, you will not need to use this.
+
+If for any reason you need to reprovision the vm, you will need to run
+
+```
+vagrant provision
+```
+
+Be carefull with this one, as it takes a LOT of time on slow connection.
 
 ***IMPORTANT***
 
@@ -80,11 +71,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
-## Windows Support
-
-Shell script will run from within the vm to provision the setup
-
-## Hosts setup
+## Hosts Setup
 
 You will need to add the following to your hosts file
 
@@ -124,7 +111,7 @@ C:\Windows\System32\Drivers\etc\hosts
 
 You may be required to use admin privileges to edit the hosts file.
 
-## Workshop setup
+## Workshop Setup
 
 For your convenience there is a `run.sh` script available in the root of the summercamp vm
 ```
@@ -157,7 +144,19 @@ profiling
 symfony3
 ```
 
-so you could run
+To run it, you need to ssh into your vm by using 
+
+```
+vagrant ssh
+```
+
+Once you are logged in to your vm, execute
+
+```
+cd /var/www/summercamp/
+```
+
+and then you can execute
 
 ```
 ./run.sh ezsylius
