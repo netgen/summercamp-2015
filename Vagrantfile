@@ -42,4 +42,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, path: "provisioning/windows.sh",
                       :keep_color => true
 
+  config.ssh.username = 'vagrant'
+  config.ssh.password = 'vagrant'
+
 end
