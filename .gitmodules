@@ -1,61 +1,61 @@
 [submodule "workshops/ezpublish-community-sylius"]
 	path = workshops/ezpublish-community-sylius
-	url = git@github.com:ilukac/ezpublish-community-sylius.git
+	url = https://github.com/ilukac/ezpublish-community-sylius.git
 [submodule "workshops/doctrine"]
 	path = workshops/doctrine
-	url = git@github.com:umpirsky/phpsummercamp-doctrine.git
+	url = https://github.com/umpirsky/phpsummercamp-doctrine.git
 [submodule "workshops/httpcache"]
 	path = workshops/httpcache
 	url = https://gitlab.com/dbu/varnish-workshop.git
 [submodule "workshops/ezobjwrapper"]
 	path = workshops/ezobjwrapper
-	url = git@github.com:kaliop/ezobjectwrapper-workshop.git
+	url = https://github.com/kaliop/ezobjectwrapper-workshop.git
 [submodule "workshops/oop"]
 	path = workshops/oop
-	url = git@github.com:weaverryan/php-summercamp-oo.git
+	url = https://github.com/weaverryan/php-summercamp-oo.git
 [submodule "workshops/ez-performance"]
 	path = workshops/ez-performance
 	url = https://github.com/kuborgh/ezsc15.git
 [submodule "workshops/ezsolr"]
 	path = workshops/ezsolr
-	url = git@github.com:pspanja/ezplatform.git
+	url = https://github.com/pspanja/ezplatform.git
 [submodule "workshops/ci"]
 	path = workshops/ci
-	url = git@github.com:ideatosrl/phpsummercamp-ci.git
+	url = https://github.com/ideatosrl/phpsummercamp-ci.git
 [submodule "workshops/loose"]
 	path = workshops/loose
-	url = git@github.com:jakzal/symfony-demo.git
+	url = https://github.com/jakzal/symfony-demo.git
 	branch = php-summercamp
 [submodule "workshops/puli"]
 	path = workshops/puli
-	url = git@bitbucket.org:webmozart/puli-workshop.git
+	url = https://bitbucket.org/webmozart/puli-workshop.git
 [submodule "workshops/ezbolt"]
 	path = workshops/ezbolt
-	url = git@github.com:janit/ezbolt
+	url = https://github.com/janit/summercamp-ezbolt.git
 [submodule "workshops/frontend"]
 	path = workshops/frontend
-	url = git@github.com:dbrekalo/php-summercamp-2015.git
+	url = https://github.com/dbrekalo/php-summercamp-2015.git
 [submodule "workshops/lionframe"]
 	path = workshops/lionframe
-	url = git@github.com:michalmarcinkowski/php-summercamp-2015-rapid-api.git
+	url = https://github.com/michalmarcinkowski/php-summercamp-2015-rapid-api.git
 [submodule "workshops/modelling"]
 	path = workshops/modelling
-	url = git@github.com:pjedrzejewski/php-summercamp-modelling-by-example.git
+	url = https://github.com/pjedrzejewski/php-summercamp-modelling-by-example.git
 [submodule "workshops/modernising"]
 	path = workshops/modernising
-	url = git@github.com:mareg/legacy-summercamp-2015.git
+	url = https://github.com/mareg/legacy-summercamp-2015.git
 [submodule "workshops/apigility"]
 	path = workshops/apigility
-	url = git@github.com:ezimuel/php-summercamp-apigility.git
+	url = https://github.com/ezimuel/php-summercamp-apigility.git
 [submodule "workshops/ezplatform"]
 	path = workshops/ezplatform
-	url = git@github.com:ezsystems/ezsc2015-beginner-tutorial.git
+	url = https://github.com/ezsystems/ezsc2015-beginner-tutorial.git
 [submodule "workshops/ezplatformui"]
 	path = workshops/ezplatformui
-	url = git@github.com:bdunogier/ezplatform.git
+	url = https://github.com/bdunogier/ezplatform.git
 [submodule "workshops/profiling"]
 	path = workshops/profiling
 	url = https://github.com/nicolas-grekas/workshop-profiling.git
 [submodule "workshops/symfony3"]
 	path = workshops/symfony3
-	url = git@github.com:nicolas-grekas/workshop-symfony3.git
+	url = https://github.com/nicolas-grekas/workshop-symfony3.git
