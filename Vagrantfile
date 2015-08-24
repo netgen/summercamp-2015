@@ -8,7 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "netgen/summercamp2015"
-  
+  config.vm.box_url = "http://www.netgenlabs.com/ezsc/summercamp2015.box"
+
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   config.vm.network "private_network", ip: "172.21.12.10"
