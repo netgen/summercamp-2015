@@ -19,6 +19,8 @@ The minimum recommended version of vagrant at the time of writng is 1.7.3
 
 With these versions you can use Virtualbox 4.x or 5.x
 
+You will also need to have hardware virtualization option activated in bios, if you have one.
+
 ## Workshop Virtual Machine Setup
 
 The local development is meant to be used in a vagrant provisioned box.
@@ -52,6 +54,25 @@ You should open up the Virtualbox, click the vm running (name should be along th
 and reset it (on OSX it is cmd+t). This is due to some weird bug somewhere on intersection of vagrant, virtualbox and
 this ubuntu cloud image.
 After the initial virtual machine build, you will not need to use this.
+
+If you experience error along the lines of
+```
+==> default: Adding box 'netgen/summercamp2015' (v1.0.1) for provider: virtualbox
+    default: Downloading: https://atlas.hashicorp.com/netgen/boxes/summercamp2015/versions/1.0.1/providers/virtualbox.box
+==> default: Box download is resuming from prior download progress
+An error occurred while downloading the remote file. The error
+message, if any, is reproduced below. Please fix this error and try
+again.
+
+HTTP server doesn't seem to support byte ranges. Cannot resume.
+```
+
+you will need to execute
+```
+rm ~/.vagrant.d/tmp/*
+```
+
+You may be required to use admin privileges to execute this.
 
 If for any reason you need to reprovision the vm, you will need to run
 
