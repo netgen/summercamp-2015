@@ -15,7 +15,7 @@ You need to have following installed:
 - [Vagrant]
 - [VirtualBox]
 
-The minimum recommended version of vagrant at the time of writng is 1.7.3
+The minimum recommended version of vagrant at the time of writng is 1.7.4
 
 With these versions you can use Virtualbox 4.x or 5.x
 
