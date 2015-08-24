@@ -15,8 +15,8 @@ function ezsylius_setup() {
 function ezobjwrapper_setup() {
   echo "Running ezobjwrapper workshop setup..."
   ( cd workshops/ezobjwrapper &&
-    git checkout master &&
-    git pull origin master &&
+    git checkout step-0 &&
+    git pull origin step-0 &&
     sudo ln -sf /var/www/summercamp/workshops/ezobjwrapper/installation/vhost /etc/apache2/sites-enabled/ezobjwrapper.conf &&
     sudo sh ./installation/run.sh
   )

@@ -31,7 +31,7 @@
 	url = https://bitbucket.org/webmozart/puli-workshop.git
 [submodule "workshops/ezbolt"]
 	path = workshops/ezbolt
-	url = https://github.com/janit/summercamp-ezbolt.git
+	url = https://github.com/janit/ezbolt.git
 [submodule "workshops/frontend"]
 	path = workshops/frontend
 	url = https://github.com/dbrekalo/php-summercamp-2015.git
