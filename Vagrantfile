@@ -23,7 +23,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "./", "/var/www/summercamp",
-        type: "nfs"
+        type: "nfs",
+        mount_options: ['rw', 'vers=3', 'tcp', 'fsc' ,'actimeo=2']
 
   config.vm.boot_timeout = 9000
 
