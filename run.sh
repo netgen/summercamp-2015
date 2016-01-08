@@ -246,13 +246,10 @@ function all() {
 }
 
 echo "Running github token setup..."
-# This is unfortunately only way to avoid Github API limits.
-# Please don't use our token, neither token nor it's user gives access to anything other then authentication, so better if you create your own.
-# PS: The simple obfuscation here is only to avoid Github from detecting this on commits.
-EZ_GITHUB_TOKEN_A=`echo "72da3af60fc34f59dec6" | rev`
-EZ_GITHUB_TOKEN_B=`echo "e2c23336ce0d96dcc3db" | rev`
-
-composer config -g github-oauth.github.com "${EZ_GITHUB_TOKEN_A}${EZ_GITHUB_TOKEN_B}"
+# PLEASE DO NOT USE THIS TOKEN IN YOUR OWN PROJECTS/FORKS",
+# This token is reserved for fetching summer camp repositories",
+# You create your own token without(!) any scope to use same approach",
+composer config -g github-oauth.github.com "4dd9fefd938753073b2915b2ecd052d288370e8f"
 
 # setup the submodules
 git submodule init
